@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "alg";
+  src: url("./alg.TTF");
+}
+@font-face {
+  font-family: "sina";
+  src: url("./sina.ttf");
+}
+@font-face {
+  font-family: "ara";
+  src: url("./ara.ttf");
+}
+* {
+  transition: 0.5s;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards .card {
+  width: 31%;
+  margin: 10px auto;
+  background-color: #0f0;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.cards .card .image {
+  width: 100%;
+}
+.cards .card .image img {
+  width: 100%;
+  min-height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card .image img:hover {
+  transform: scale(1.1);
+}
+.card .info p {
+  background-color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  color: #0f0;
+  font-weight: bold;
+  position: relative;
+  text-transform: capitalize;
+  overflow: hidden;
+  font-family: "alg";
+}
+.card .info p:last-child {
+  min-height: 380px;
+}
+@media (max-width: 649px) {
+  .cards {
+    flex-direction: column;
+  }
+  .cards .card {
+    width: 90%;
+  }
+}
+@media (min-width: 650px) and (max-width: 900px) {
+  .cards .card {
+    width: 46%;
+  }
+  .card .image img {
+    min-height: 390px !important;
+  }
+}
+@media (min-width: 901px) {
+  .cards .card {
+    width: 31%;
+  }
+  .card .image img {
+    min-height: 340px !important;
+  }
+}
